@@ -8,6 +8,7 @@
     tools:context=".MainActivity" >
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
@@ -19,33 +20,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/movie_catalog"
                 android:textColor="@color/white"
-                android:textStyle="bold"
                 android:textSize="30sp"
-                android:text="@string/movie_catalog" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:layout_marginStart="16dp"
-                android:text="@string/popular_movies" />
+                android:text="@string/popular_movies"
+                android:textColor="@color/white" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_movies_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp" />
         </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/Error_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nestedScrollView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
